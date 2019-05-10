@@ -1,0 +1,120 @@
+﻿
+        
+.nexainput.nexaleftalign
+{
+  text-align:left;
+}
+.nexainput.nexarightalign
+{
+  text-align:right;
+}
+.nexainput.nexacenteralign
+{
+  text-align:center;
+}
+
+.nexacontentsbox.nexaleftalign
+{
+  text-align:left;
+}
+.nexacontentsbox.nexarightalign
+{
+  text-align:right;
+}
+.nexacontentsbox.nexacenteralign
+{
+  text-align:center;
+}
+.celltreeline
+{
+  border : 1px dotted #999999;
+}
+.Edit, .MaskEdit, .TextArea, .EditControl, .MaskEditControl, .TextAreaControl
+{
+  cursor:text;
+}
+.Button .nexacontentsbox, .ButtonControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.FileDownload  .nexacontentsbox, .FileDownloadControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.IconTextControl .nexacontentsbox, .IconControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.DatePickerDayItemControl .nexacontentsbox, .DatePickerWeekItemControl .nexacontentsbox, .TitleBarButtonControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.MainFrame, .VScrollBarControl, .HScrollBarControl
+{
+  cursor:default;
+}
+.nexainput
+{
+  cursor:inherit;
+}
+
+* .Calendar.simple_module .datepicker .head
+{
+	background : orangered;
+}
+.DatePickerControl.popupCalendarsimple_moduledatepicker .head
+{
+	background : orangered;
+}
+* .Calendar.simple_module .datepicker .body .weekband
+{
+	background : orangered;
+}
+.DatePickerControl.popupCalendarsimple_moduledatepicker .body .weekband
+{
+	background : orangered;
+}
+* .Calendar.simple_module .datepicker .body
+{
+	border : 1px none transparent;
+}
+.DatePickerControl.popupCalendarsimple_moduledatepicker .body
+{
+	border : 1px none transparent;
+}
+* .Calendar.simple_module .datepicker .body .dayitem[userstatus=saturday]
+{
+	color : #333333;
+}
+.DatePickerControl.popupCalendarsimple_moduledatepicker .body .dayitem[userstatus=saturday]
+{
+	color : #333333;
+}
+* .Calendar.simple_module .datepicker .body .dayitem[userstatus=sunday]
+{
+	color : #333333;
+}
+.DatePickerControl.popupCalendarsimple_moduledatepicker .body .dayitem[userstatus=sunday]
+{
+	color : #333333;
+}
+* .Calendar.simple_module .datepicker .body .weekitem[userstatus=saturday]
+{
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendarsimple_moduledatepicker .body .weekitem[userstatus=saturday]
+{
+	color : #ffffff;
+}
+* .Calendar.simple_module .datepicker .body .weekitem[userstatus=sunday]
+{
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendarsimple_moduledatepicker .body .weekitem[userstatus=sunday]
+{
+	color : #ffffff;
+}

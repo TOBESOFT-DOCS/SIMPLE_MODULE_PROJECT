@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaInfo version="2.0">
+  <Object id="TwoMonthCalendar">
+    <ObjectInfo inheritance="nexacro.CompositeComponent" classname="nexacro.TwoMonthCalendar" shorttypename="TwoMonthCalendar" csstypename="TwoMonthCalendar" csscontrolname="TwoMonthCalendar_Control" group="Component" subgroup="ContainerComponent" csspseudo="true" container="true" composit="" tabstop="true" cssstyle="true" contents="false" formats="false" contentseditor="" defaultwidth="405" defaultheight="200" registration="allow" edittype="" useinitvalue="true" popup="false" edittypecomponent="" dblclickevent="onclick" requirement="IE8,IE9,IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows nexacro Browser,macOS nexacro Browser,Android nexacro Browser,iOS nexacro Browser,Android Default Web Browser,iOS Default Web Browser" description="TEST"/>
+    <PropertyInfo>
+      <Property name="fromValue" group="" subgroup="" edittype="String" defaultvalue="20150101" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" objectinfo="" refreshinfo="" enuminfo="" unitinfo="" delimiter="" requirement="Android Default Web Browser,Android nexacro Browser,Chrome,Firefox,IE10,IE11,IE8,IE9,Opera,Safari,Windows nexacro Browser,iOS Default Web Browser,iOS nexacro Browser,macOS nexacro Browser" csspropertyname="" csselementname="" normalpropertyname="" description=""/>
+      <Property name="toValue" group="" subgroup="" edittype="String" defaultvalue="20150201" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="true" objectinfo="" refreshinfo="" enuminfo="" unitinfo="" delimiter="" requirement="" csspropertyname="" csselementname="" normalpropertyname="" description=""/>
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo/>
+    </CSSInfo>
+    <StatusInfo/>
+    <MethodInfo>
+      <Method name="getDayCount" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Android Default Web Browser,Android nexacro Browser,Chrome,Firefox,IE10,IE11,IE8,IE9,Opera,Safari,Windows nexacro Browser,iOS Default Web Browser,iOS nexacro Browser,macOS nexacro Browser" description="테스트">
+        <Syntax text="getDayCount()">
+          <Return type="Integer" description=""/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="addDay" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="" description="">
+        <Syntax text="addDay(nDay)">
+          <Return type="Boolean" description=""/>
+          <Arguments>
+            <Argument name="nDay" type="Integer" in="true" out="false" option="false" variable="false" description="Add days to the second calendar"/>
+          </Arguments>
+        </Syntax>
+      </Method>
+    </MethodInfo>
+    <EventHandlerInfo>
+      <EventHandler name="onchanged" group="Event" deprecated="false" unused="false" requirement="" description="">
+        <Syntax text="onchanged(obj:nexacro.TwoMonthCalendar, e:nexacro.ChangeEventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.TwoMonthCalendar" in="true" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.ChangeEventInfo" in="true" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+    </EventHandlerInfo>
+  </Object>
+</MetaInfo>

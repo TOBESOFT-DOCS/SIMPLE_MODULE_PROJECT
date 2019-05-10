@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XCSS version="1.0"><![CDATA[.Calendar.simple_module .datepicker .head
+{
+	background : orangered;
+}
+.Calendar.simple_module .datepicker .body .weekband
+{
+	background : orangered;
+}
+.Calendar.simple_module .datepicker .body
+{
+	-nexa-border : 1px none transparent;
+}
+
+.Calendar.simple_module .datepicker .body .dayitem[userstatus=saturday]
+{
+    color : #333333;
+}
+.Calendar.simple_module .datepicker .body .dayitem[userstatus=sunday]
+{
+    color : #333333;
+}
+.Calendar.simple_module .datepicker .body .weekitem[userstatus=saturday]
+{
+    color : #ffffff;
+}
+.Calendar.simple_module .datepicker .body .weekitem[userstatus=sunday]
+{
+    color : #ffffff;
+}
+.btn
+{
+	
+}
+]]></XCSS>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CDL version="2.0">
+  <Form id="TwoMonthCalendar_V2" width="405" height="200" titletext="TwoMonthCalendar_V2">
+    <Layouts>
+      <Layout width="405" height="200">
+        <Calendar id="calFrom" taborder="0" left="0" top="0" type="monthonly" locale="en_US" width="200" height="200" onchanged="calFrom_onchanged" cssclass="simple_module"/>
+        <Calendar id="calTo" taborder="1" left="205" top="0" width="200" height="200" type="monthonly" locale="en_US" onchanged="calTo_onchanged" cssclass="simple_module"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.calFrom_onchanged = function(obj:nexacro.Calendar,e:nexacro.ChangeEventInfo)
+{
+	if(this.parent.applyto_bindSource("fromValue", e.postvalue))
+	{
+		this.parent.set_fromValue(e.postvalue);
+		this.parent.on_fire_onchanged(obj, e.pretext, e.prevalue, e.posttext, e.postvalue);
+	}
+};
+
+this.calTo_onchanged = function(obj:nexacro.Calendar,e:nexacro.ChangeEventInfo)
+{
+	if(this.parent.applyto_bindSource("toValue", e.postvalue))
+	{
+		this.parent.set_toValue(e.postvalue);
+		this.parent.on_fire_onchanged(obj, e.pretext, e.prevalue, e.posttext, e.postvalue);
+	}
+};
+]]></Script>
+  </Form>
+  <ClassDefinition classname="nexacro.TwoMonthCalendar" type="xscript5.1"><![CDATA[//==============================================================================
+// Object : nexacro.TwoMonthCalendar
+// Group : Component
+//==============================================================================
+if (!nexacro.TwoMonthCalendar)
+{
+	//==============================================================================
+	// nexacro.TwoMonthCalendar
+	//==============================================================================
+	nexacro.TwoMonthCalendar = function (id, left, top, width, height, right, bottom, minwidth, maxwidth, minheight, maxheight, parent)
+	{
+		nexacro._CompositeComponent.call(this, id, left, top, width, height, right, bottom, minwidth, maxwidth, minheight, maxheight, parent);
+		this.addEvent("onchanged");
+	};
+	
+	var _pTwoMonthCalendar = nexacro._createPrototype(nexacro._CompositeComponent, nexacro.TwoMonthCalendar);
+	nexacro.TwoMonthCalendar.prototype = _pTwoMonthCalendar;
+	_pTwoMonthCalendar._type_name = "TwoMonthCalendar";
+	
+	/* accessibility */
+	_pTwoMonthCalendar.accessibilityrole = "button";
+
+	_pTwoMonthCalendar.fromValue = undefined;
+	_pTwoMonthCalendar.set_fromValue = function (v)
+	{
+		if(this.form.calFrom)
+		{
+			this.form.calFrom.set_value(v);
+		}
+		this.fromValue = v;
+	};
+	
+	_pTwoMonthCalendar.toValue = undefined;
+	_pTwoMonthCalendar.set_toValue = function (v)
+	{
+		if(this.form.calTo)
+		{
+			this.form.calTo.set_value(v);
+		}
+		this.toValue = v;
+	};
+	
+	_pTwoMonthCalendar.getDayCount = function ()
+	{
+		var fromDate = new Date();
+		var toDate = new Date();
+		var calDate;
+		var day = 1000*60*60*24;
+		var returnvalue = -1;
+		
+		if(this.form.calFrom.value && this.form.calTo.value)
+		{
+			fromDate.setFullYear(this.form.calFrom.getYear());
+			fromDate.setMonth(this.form.calFrom.getMonth()-1);
+			fromDate.setDate(this.form.calFrom.getDay());
+			
+			toDate.setFullYear(this.form.calTo.getYear());
+			toDate.setMonth(this.form.calTo.getMonth()-1);
+			toDate.setDate(this.form.calTo.getDay());
+			
+			calDate = fromDate.getTime() - toDate.getTime();
+			trace("calDate: "+calDate);
+			
+			returnvalue = Math.abs(calDate/day);
+		}
+		trace("returnvalue: "+returnvalue);
+		return returnvalue;
+	};
+	
+	_pTwoMonthCalendar.on_fire_onchanged = function (obj, pretext, prevalue, posttext, postvalue)
+	{
+		if (this.onchanged && this.onchanged._has_handlers)
+		{
+			var evt = new nexacro.ChangeEventInfo(obj, "onchanged", pretext, prevalue, posttext, postvalue);
+			return this.onchanged._fireEvent(this, evt);
+		}
+		return false;
+	};	
+	
+	_pTwoMonthCalendar.addDay = function (nDay)
+	{
+		var fromDate = new Date();
+		var toDate = new Date();
+		
+		if(this.form.calFrom.value)
+		{
+			fromDate.setFullYear(this.form.calFrom.getYear());
+			fromDate.setMonth(this.form.calFrom.getMonth()-1);
+			fromDate.setDate(this.form.calFrom.getDay());
+			toDate = new Date(fromDate.addDate(nDay));
+			
+			var year = toDate.getFullYear().toString().padLeft(4, "0");
+			var month = (toDate.getMonth()+1).toString().padLeft(2, "0");
+			var day = toDate.getDate().toString().padLeft(2, "0");			
+			
+			this.form.calTo.set_value(year+month+day);
+			return true;
+		}
+		else
+		{
+			trace("calFrom value is null");
+			return false;
+		}
+	};	
+	
+	_pTwoMonthCalendar.on_init_bindSource = function (columnid, propid, ds)
+	{
+		if (propid == "fromValue") {
+			this.fromValue = undefined;
+		}		
+	};	
+	
+	_pTwoMonthCalendar.on_change_bindSource = function (propid, ds, row, col)
+	{
+		if (propid == "fromValue")
+        {	
+			if (this.form.calFrom)
+				this.form.calFrom.on_change_bindSource("value", ds, row, col);
+        }
+	};	
+	
+	_pTwoMonthCalendar.on_getBindableProperties = function ()
+	{
+		return "fromValue";
+	};	
+	
+	delete _pTwoMonthCalendar;
+}]]></ClassDefinition>
+</CDL>

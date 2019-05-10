@@ -1,4 +1,4 @@
-# 넥사크로플랫폼 17 넥사크로 모듈 디벨로퍼 가이드(베타) 프로젝트
+# 넥사크로 모듈 디벨로퍼 가이드(베타) 프로젝트
 
 ![Product Version](https://img.shields.io/badge/nexacro%20module%20developer-beta-blue.svg)
 

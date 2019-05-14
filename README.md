@@ -4,4 +4,4 @@
 
 넥사크로플랫폼 17 모듈 디벨로퍼 가이드(베타) 문서 내 포함된 예제 프로젝트 저장소입니다.
 
-> 모듈 디벨로퍼 가이드(베타) 문서는 다음 링크에서 볼 수 있습니다 (http://docs.tobesoft.com/developer_guide_nexacro_17_ko)
+> 모듈 디벨로퍼 가이드(베타) 문서는 다음 링크에서 볼 수 있습니다 (http://docs.tobesoft.com/nexacro_module_developer_guide_beta_ko)

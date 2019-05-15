@@ -72,7 +72,7 @@ if (!nexacro.TwoMonthCalendar)
 		if (this.onchanged && this.onchanged._has_handlers)
 		{
 			var evt = new nexacro.ChangeEventInfo(obj, "onchanged", pretext, prevalue, posttext, postvalue);
-			return this.onchanged._fireEvent(this, evt);
+			return this.onchanged.fireEvent(this, evt);
 		}
 		return false;
 	};	
@@ -121,7 +121,7 @@ if (!nexacro.TwoMonthCalendar)
 	
 	_pTwoMonthCalendar.on_getBindableProperties = function ()
 	{
-		return "fromValue";
+		return ["fromValue"];
 	};	
 	
 	/************************************************************************

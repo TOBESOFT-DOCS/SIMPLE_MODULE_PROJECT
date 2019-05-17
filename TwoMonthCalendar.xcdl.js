@@ -18,7 +18,7 @@ if (!nexacro.TwoMonthCalendar)
 	_pTwoMonthCalendar._type_name = "TwoMonthCalendar";
 	
 	/* accessibility */
-	_pTwoMonthCalendar.accessibilityrole = "button";
+	_pTwoMonthCalendar.accessibilityrole = "form";
 
 	_pTwoMonthCalendar.fromValue = undefined;
 	_pTwoMonthCalendar.set_fromValue = function (v)
@@ -39,6 +39,27 @@ if (!nexacro.TwoMonthCalendar)
 		}
 		this.toValue = v;
 	};
+	
+	_pTwoMonthCalendar.colorTheme = "";
+	_pTwoMonthCalendar.set_colorTheme = function (v)
+	{
+		var _cssclass = "";
+		if(v=="purple")
+		{
+			_cssclass = "simple_module, simple_module_purple";
+		}
+		else
+		{
+			_cssclass = "simple_module";
+		}
+		
+		if(this.form.calFrom && this.form.calTo)
+		{
+			this.form.calFrom.set_cssclass(_cssclass);
+			this.form.calTo.set_cssclass(_cssclass);
+		}
+		this.colorTheme = v;
+	};		
 	
 	_pTwoMonthCalendar.getDayCount = function ()
 	{
@@ -216,6 +237,8 @@ if (!nexacro.TwoMonthCalendar)
 			obj = null;
 		};
 	};	
+	
+
 	
 	delete _pTwoMonthCalendar;
 }

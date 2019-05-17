@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaInfo version="2.0">
+  <Object id="DaumPostCode">
+    <ObjectInfo inheritance="nexacro.CompositeComponent" classname="nexacro.DaumPostCode" shorttypename="DaumPostCode" csstypename="DaumPostCode" csscontrolname="DaumPostCodeControl" group="Component" subgroup="ContainerComponent" csspseudo="true" container="true" composit="" tabstop="true" cssstyle="true" contents="false" formats="false" contentseditor="" defaultwidth="350" defaultheight="120" registration="allow" edittype="" useinitvalue="true" popup="false" edittypecomponent="" dblclickevent="onclick" requirement="IE8,IE9,IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows nexacro Browser,macOS nexacro Browser,Android nexacro Browser,iOS nexacro Browser,Android Default Web Browser,iOS Default Web Browser" description=""/>
+    <PropertyInfo>
+      <Property name="postcode" group="" subgroup="" edittype="String" defaultvalue="" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" objectinfo="" refreshinfo="" enuminfo="" unitinfo="" delimiter="" requirement="" csspropertyname="" csselementname="" normalpropertyname="" description=""/>
+      <Property name="address" group="" subgroup="" edittype="String" defaultvalue="" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" objectinfo="" refreshinfo="" enuminfo="" unitinfo="" delimiter="" requirement="" csspropertyname="" csselementname="" normalpropertyname="" description=""/>
+      <Property name="detailAddress" group="" subgroup="" edittype="String" defaultvalue="" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" objectinfo="" refreshinfo="" enuminfo="" unitinfo="" delimiter="" requirement="" csspropertyname="" csselementname="" normalpropertyname="" description=""/>
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo/>
+    </CSSInfo>
+    <StatusInfo/>
+    <MethodInfo/>
+    <EventHandlerInfo/>
+  </Object>
+</MetaInfo>

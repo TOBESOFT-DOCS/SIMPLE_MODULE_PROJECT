@@ -2,7 +2,12 @@
 <Project version="2.0" themeid="theme::default">
   <ModuleDefinition url="moduledefinition.xml"/>
   <CommonInfo>
-    <EnumInfos/>
+    <EnumInfos>
+      <EnumInfo id="ColorTheme" composit="false">
+        <Enum name="orange"/>
+        <Enum name="purple"/>
+      </EnumInfo>
+    </EnumInfos>
     <UnitInfos/>
     <RefreshInfos/>
   </CommonInfo>
@@ -14,9 +19,16 @@
         <File url="DesignTwoMonthCalendar.js"/>
       </DesignScripts>
     </Object>
+    <Object id="DaumPostCode" type="composite">
+      <ObjectInfo url="_metainfo_\DaumPostCode.info"/>
+      <CDL url="DaumPostCode.xcdl"/>
+      <DesignScripts>
+        <File url="DesignDaumPostCode.js"/>
+      </DesignScripts>
+    </Object>
   </Objects>
   <Help url=".\_help_\"/>
   <License url=".\_license_\"/>
   <XCSS url="_resource_\_xcss_\SIMPLE_MODULE_PROJECT.xcss"/>
-  <DeployInfo name="SIMPLE_MODULE_PROJECT" version="18" license="" description=""/>
+  <DeployInfo name="SIMPLE_MODULE_PROJECT" version="20" license="" description=""/>
 </Project>

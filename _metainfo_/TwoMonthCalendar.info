@@ -5,6 +5,7 @@
     <PropertyInfo>
       <Property name="fromValue" group="" subgroup="" edittype="String" defaultvalue="20150101" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" objectinfo="" refreshinfo="" enuminfo="" unitinfo="" delimiter="" requirement="Android Default Web Browser,Android nexacro Browser,Chrome,Firefox,IE10,IE11,IE8,IE9,Opera,Safari,Windows nexacro Browser,iOS Default Web Browser,iOS nexacro Browser,macOS nexacro Browser" csspropertyname="" csselementname="" normalpropertyname="" description=""/>
       <Property name="toValue" group="" subgroup="" edittype="String" defaultvalue="20150201" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="true" objectinfo="" refreshinfo="" enuminfo="" unitinfo="" delimiter="" requirement="" csspropertyname="" csselementname="" normalpropertyname="" description=""/>
+      <Property name="colorTheme" group="" subgroup="" edittype="Enum" defaultvalue="" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" objectinfo="" refreshinfo="" enuminfo="ColorTheme" unitinfo="" delimiter="" requirement="" csspropertyname="" csselementname="" normalpropertyname="" description=""/>
     </PropertyInfo>
     <CSSInfo>
       <PropertyInfo/>

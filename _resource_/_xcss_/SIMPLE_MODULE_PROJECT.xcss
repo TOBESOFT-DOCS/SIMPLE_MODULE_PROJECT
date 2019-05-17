@@ -28,4 +28,20 @@
 {
     color : #ffffff;
 }
+.Calendar.simple_module_purple .datepicker .head
+{
+	background : #C785C8;
+}
+.Calendar.simple_module_purple .datepicker .body .weekband
+{
+	background : #C785C8;
+}
+.DaumPostCode
+{
+	
+}
+
+.TwoMonthCalendar
+{
+}
 ]]></XCSS>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CDL version="2.0">
+  <Form id="DaumPostCode" width="350" height="120" titletext="DaumPostCode">
+    <Layouts>
+      <Layout width="350" height="120">
+        <Button id="btnFindPostcode" taborder="0" text="우편번호 찾기" left="110" top="0" width="100" height="30" onclick="btnFindPostcode_onclick"/>
+        <Edit id="editPostcode" taborder="1" left="0" top="0" width="100" height="30" readonly="true" displaynulltext="우편번호"/>
+        <Edit id="editAddress" taborder="2" left="0" top="40" width="330" height="30" readonly="true" displaynulltext="도로명주소"/>
+        <Edit id="editDetailAddress" taborder="3" left="0" top="80" width="330" height="30" displaynulltext="상세주소" onchanged="editDetailAddress_onchanged"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[var that = this;
+this.btnFindPostcode_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(daum)
+	{
+		daum.postcode.load(function(){
+			new daum.Postcode({
+				oncomplete: function(data) {
+					that.parent.set_postcode(data.zonecode);
+					that.parent.set_address(data.roadAddress);
+				}
+			}).open();
+		});
+	}
+};
+
+this.editDetailAddress_onchanged = function(obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
+{
+	this.parent.set_detailAddress(e.postvalue);
+};
+]]></Script>
+  </Form>
+  <ClassDefinition classname="nexacro.DaumPostCode" type="xscript5.1"><![CDATA[//==============================================================================
+// Object : nexacro.DaumPostCode
+// Group : Component
+//==============================================================================
+if (!nexacro.DaumPostCode)
+{
+	//==============================================================================
+	// nexacro.DaumPostCode
+	//==============================================================================
+	nexacro.DaumPostCode = function (id, left, top, width, height, right, bottom, minwidth, maxwidth, minheight, maxheight, parent)
+	{
+		nexacro._CompositeComponent.call(this, id, left, top, width, height, right, bottom, minwidth, maxwidth, minheight, maxheight, parent);
+		if(system.navigatorname != "nexacro")
+		{
+			nexacro.load_daumpostcode();
+		}
+		else
+		{
+			trace("DaumPostCode composite component supports only the web browsers");
+		}
+	};
+	
+	var _pDaumPostCode = nexacro._createPrototype(nexacro._CompositeComponent, nexacro.DaumPostCode);
+	nexacro.DaumPostCode.prototype = _pDaumPostCode;
+	_pDaumPostCode._type_name = "DaumPostCode";
+	
+	nexacro.daumpostcode_loaded = false;
+	nexacro.load_daumpostcode = function()
+	{
+		if (nexacro.daumpostcode_loaded)
+		{
+			return;
+		}
+		nexacro.daumpostcode_loaded = true;
+		var script = document.createElement("script");
+		script.type = "text/javascript";
+		// http://postcode.map.daum.net/guide 참고
+		script.src = "//dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false";
+		document.body.appendChild(script);
+	};
+	
+	/* accessibility */
+	_pDaumPostCode.accessibilityrole = "form";	
+	
+	_pDaumPostCode.postcode = "";
+	_pDaumPostCode.set_postcode = function (v)
+	{
+		if(this.form.editPostcode)
+		{
+			this.form.editPostcode.set_value(v);
+		}
+		this.postcode = v;
+		
+	};	
+	
+	_pDaumPostCode.address = "";
+	_pDaumPostCode.set_address = function (v)
+	{
+		if(this.form.editAddress)
+		{
+			this.form.editAddress.set_value(v);
+		}
+		this.address = v;
+		
+	};	
+	
+	_pDaumPostCode.detailAddress = "";
+	_pDaumPostCode.set_detailAddress = function (v)
+	{
+		if(this.form.editDetailAddress)
+		{
+			this.form.editDetailAddress.set_value(v);
+		}
+		this.detailAddress = v;
+	};	
+	
+	delete _pDaumPostCode;
+}
+
+]]></ClassDefinition>
+</CDL>

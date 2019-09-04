@@ -44,4 +44,9 @@
 .TwoMonthCalendar
 {
 }
+
+.ToggleButton
+{
+	
+}
 ]]></XCSS>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaInfo version="2.0">
+  <Object id="ToggleButton">
+    <ObjectInfo inheritance="nexacro.CompositeComponent" classname="nexacro.ToggleButton" shorttypename="ToggleButton" csstypename="ToggleButton" csscontrolname="ToggleButtonControl" group="Component" subgroup="Component ( default )" csspseudo="true" container="true" composit="" tabstop="true" cssstyle="true" contents="false" formats="false" contentseditor="" defaultwidth="60" defaultheight="30" registration="allow" edittype="" useinitvalue="true" popup="false" edittypecomponent="" dblclickevent="onclick" requirement="IE8,IE9,IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows nexacro Browser,macOS nexacro Browser,Android nexacro Browser,iOS nexacro Browser,Android Default Web Browser,iOS Default Web Browser" description=""/>
+    <PropertyInfo>
+      <Property name="toggleType" group="" subgroup="" edittype="Enum" defaultvalue="rectangle" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" objectinfo="" refreshinfo="" enuminfo="ToggleType" unitinfo="" delimiter="" requirement="" csspropertyname="" csselementname="" normalpropertyname="" description=""/>
+      <Property name="toggleOnColor" group="" subgroup="" edittype="String" defaultvalue="#2196F3" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" objectinfo="" refreshinfo="" enuminfo="" unitinfo="" delimiter="" requirement="" csspropertyname="" csselementname="" normalpropertyname="" description=""/>
+      <Property name="toggleOffColor" group="" subgroup="" edittype="String" defaultvalue="#CCCCCC" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" objectinfo="" refreshinfo="" enuminfo="" unitinfo="" delimiter="" requirement="" csspropertyname="" csselementname="" normalpropertyname="" description=""/>
+      <Property name="value" edittype="Boolean" defaultvalue="false" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false"/>
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo/>
+    </CSSInfo>
+    <StatusInfo/>
+    <MethodInfo/>
+    <EventHandlerInfo>
+      <EventHandler name="canchange" group="Event" unused="false" deprecated="false">
+        <Syntax text="canchange(obj:nexacro.ToggleButton, e:nexacro.CheckBoxChangedEventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.ToggleButton" in="true" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.CheckBoxChangedEventInfo" in="true" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="onchanged" group="Event" unused="false" deprecated="false">
+        <Syntax text="onchanged(obj:nexacro.ToggleButton, e:nexacro.CheckBoxChangedEventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.ToggleButton" in="true" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.CheckBoxChangedEventInfo" in="true" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+    </EventHandlerInfo>
+  </Object>
+</MetaInfo>

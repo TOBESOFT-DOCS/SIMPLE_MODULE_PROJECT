@@ -145,6 +145,13 @@ if (!nexacro.TwoMonthCalendar)
 		return ["fromValue"];
 	};	
 	
+	_pTwoMonthCalendar.on_create_contents = function ()
+	{
+		this.set_fromValue(this.fromValue);
+		this.set_toValue(this.toValue);
+		this.set_colorTheme(this.colorTheme);
+	};	
+	
 	/************************************************************************
 	FUNCTION : _get_form_module
 	DESCRIPTION :

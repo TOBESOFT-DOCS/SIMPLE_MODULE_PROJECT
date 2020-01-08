@@ -245,7 +245,5 @@ if (!nexacro.TwoMonthCalendar)
 		};
 	};	
 	
-
-	
-	delete _pTwoMonthCalendar;
+	delete _pTwoMonthCalendar; 
 }

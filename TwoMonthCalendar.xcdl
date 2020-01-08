@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<CDL version="2.0">
+<CDL version="2.1">
   <Form id="TwoMonthCalendar_V2" width="405" height="200" titletext="TwoMonthCalendar_V2">
     <Layouts>
       <Layout width="405" height="200">
@@ -181,8 +181,6 @@ if (!nexacro.TwoMonthCalendar)
 		this.set_colorTheme(this.colorTheme);
 	};	
 	
-
-	
-	delete _pTwoMonthCalendar;
+	delete _pTwoMonthCalendar; 
 }]]></ClassDefinition>
 </CDL>

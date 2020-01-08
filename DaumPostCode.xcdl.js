@@ -61,7 +61,6 @@ if (!nexacro.DaumPostCode)
 			this.form.editAddress.set_value(v);
 		}
 		this.address = v;
-		
 	};	
 	
 	_pDaumPostCode.detailAddress = "";

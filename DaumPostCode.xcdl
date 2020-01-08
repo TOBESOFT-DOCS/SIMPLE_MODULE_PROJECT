@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<CDL version="2.0">
+<CDL version="2.1">
   <Form id="DaumPostCode" width="350" height="120" titletext="DaumPostCode">
     <Layouts>
       <Layout width="350" height="120">
@@ -94,7 +94,6 @@ if (!nexacro.DaumPostCode)
 			this.form.editAddress.set_value(v);
 		}
 		this.address = v;
-		
 	};	
 	
 	_pDaumPostCode.detailAddress = "";

@@ -190,7 +190,7 @@ if (!nexacro.ToggleButton)
 		if (this.value != v) {
 			if (this.applyto_bindSource("value", v)) {
 				this._setValue(v);
-				_pToggleButton._changebutton(this.value);
+				this._changebutton(this.value);
 			}
 		}	
 	};	

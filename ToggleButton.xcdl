@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<CDL version="2.0">
+<CDL version="2.1">
   <Form id="ToggleButton" width="60" height="30" titletext="ToggleButton">
     <Layouts>
       <Layout width="60" height="30">
@@ -211,7 +211,7 @@ if (!nexacro.ToggleButton)
 		if (this.value != v) {
 			if (this.applyto_bindSource("value", v)) {
 				this._setValue(v);
-				_pToggleButton._changebutton(this.value);
+				this._changebutton(this.value);
 			}
 		}	
 	};	

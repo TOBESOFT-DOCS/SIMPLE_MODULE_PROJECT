@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project version="2.0" themeid="theme::default">
+<Project version="2.1" themeid="theme::default">
   <ModuleDefinition url="moduledefinition.xml"/>
   <CommonInfo>
     <EnumInfos>
@@ -41,6 +41,6 @@
   <Help url=".\_help_\"/>
   <License url=".\_license_\"/>
   <XCSS url="_resource_\_xcss_\SIMPLE_MODULE_PROJECT.xcss"/>
-  <DeployInfo name="SIMPLE_MODULE_PROJECT" version="23" license="" description=""/>
+  <DeployInfo name="SIMPLE_MODULE_PROJECT" version="23" license="" description="" moduletype="component" minnexacroversion=""/>
   <Icons url=".\_icons_\"/>
 </Project>

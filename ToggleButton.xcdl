@@ -114,8 +114,11 @@ if (!nexacro.ToggleButton)
 			leftvalue = this.form.width/2;
 		}
 		
-		this.form.aniToggleBtn.items[0].props = "left:"+leftvalue;
-		this.form.aniToggleBtn.play();
+		if(this.form.aniToggleBtn)
+		{
+			this.form.aniToggleBtn.items[0].props = "left:"+leftvalue;
+			this.form.aniToggleBtn.play();
+		}
 	}
 	
 	_pToggleButton._changecolor = function (value) {
